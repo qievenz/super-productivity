@@ -18,6 +18,7 @@
   "workspaces": [
     "example-plugin",
     "simple-typescript-plugin",
-    "procrastination-buster"
+    "procrastination-buster",
+    "obsidian-note"
   ]
 }

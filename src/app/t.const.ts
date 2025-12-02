@@ -716,6 +716,11 @@ const T = {
         NOTE_ADDED: 'F.NOTE.S.NOTE_ADDED',
       },
     },
+    OBSIDIAN: {
+      HELP: 'F.OBSIDIAN.HELP',
+      IS_ENABLED: 'F.OBSIDIAN.IS_ENABLED',
+      VAULT_NAME: 'F.OBSIDIAN.VAULT_NAME',
+    },
     OPEN_PROJECT: {
       CFG_CMP: {
         ALWAYS_ASK: 'F.OPEN_PROJECT.CFG_CMP.ALWAYS_ASK',

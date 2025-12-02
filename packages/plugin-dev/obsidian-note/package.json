@@ -1,0 +1,16 @@
+{
+  "name": "obsidian-note",
+  "version": "1.0.0",
+  "description": "Integrate Obsidian notes with Super Productivity.",
+  "scripts": {
+    "build": "vite build",
+    "package": "npm run build && node scripts/package.js"
+  },
+  "author": "Gemini",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^4.0.0",
+    "typescript": "^5.0.0",
+    "archiver": "^7.0.1"
+  }
+}

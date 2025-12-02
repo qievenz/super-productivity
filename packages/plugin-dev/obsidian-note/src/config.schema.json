@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Obsidian Note Configuration",
+  "type": "object",
+  "properties": {
+    "vaultPath": {
+      "type": "string",
+      "title": "Obsidian Vault Path",
+      "description": "The absolute path to your Obsidian vault."
+    }
+  },
+  "required": ["vaultPath"]
+}

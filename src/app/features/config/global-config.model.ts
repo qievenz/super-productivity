@@ -192,6 +192,12 @@ export type DominaModeConfig = Readonly<{
   voice?: string | null;
 }>;
 
+export interface ObsidianConfig {
+  isEnabled: boolean;
+  vaultName: string;
+  vaultPath: string;
+}
+
 export type FocusModeConfig = Readonly<{
   isAlwaysUseFocusMode: boolean;
   isSkipPreparation: boolean;
@@ -219,6 +225,7 @@ export type GlobalConfigState = Readonly<{
   reminder: ReminderConfig;
   schedule: ScheduleConfig;
   dominaMode: DominaModeConfig;
+  obsidian?: ObsidianConfig;
   focusMode: FocusModeConfig;
 
   sync: SyncConfig;

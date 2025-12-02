@@ -1,0 +1,27 @@
+{
+  "id": "obsidian-note",
+  "manifestVersion": 1,
+  "name": "Obsidian Note",
+  "version": "1.0.0",
+  "description": "Integrate Obsidian notes with Super Productivity.",
+  "author": "Gemini",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "minSupVersion": "10.0.0",
+  "permissions": [
+    "nodeExecution",
+    "persistDataSynced",
+    "loadSyncedData"
+  ],
+  "iFrame": true,
+  "hooks": ["TASK_UPDATE"],
+  "sidePanel": {
+    "label": "Obsidian Note",
+    "icon": "icon.svg"
+  },
+  "jsonSchemaCfg": "config.schema.json",
+  "icon": "icon.svg"
+}
