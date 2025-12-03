@@ -18,10 +18,6 @@
   ],
   "iFrame": true,
   "hooks": ["TASK_UPDATE"],
-  "sidePanel": {
-    "label": "Obsidian Note",
-    "icon": "icon.svg"
-  },
   "jsonSchemaCfg": "config.schema.json",
   "icon": "icon.svg"
 }
