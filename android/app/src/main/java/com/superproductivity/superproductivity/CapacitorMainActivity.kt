@@ -44,6 +44,7 @@ class CapacitorMainActivity : BridgeActivity() {
         // Register plugins before calling super.onCreate()
         registerPlugin(SafBridgePlugin::class.java)
         registerPlugin(WebDavHttpPlugin::class.java)
+        registerPlugin(TodayWidgetPlugin::class.java)
 
         super.onCreate(savedInstanceState)
         if (webViewBlocked) {

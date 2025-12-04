@@ -37,6 +37,9 @@ import { DateService } from 'src/app/core/date/date.service';
 import { EntityState } from '@ngrx/entity';
 import { Action } from '@ngrx/store';
 import { TranslatePipe } from '@ngx-translate/core';
+import { Plugins } from '@capacitor/core';
+
+const { TodayWidget } = Plugins;
 
 import { IS_ELECTRON } from '../../app.constants';
 import { ConfettiService } from '../../core/confetti/confetti.service';
@@ -272,9 +275,14 @@ export class DailySummaryComponent implements OnInit, OnDestroy, AfterViewInit {
       cfg?.dailySummaryNote?.txt &&
       cfg?.dailySummaryNote?.lastUpdateDayStr !== this._dateService.todayStr()
     ) {
-      this.dailySummaryNoteTxt.set(
-        unToggleCheckboxesInMarkdownTxt(cfg.dailySummaryNote.txt),
-      );
+    this.updateDailySummaryTxt(
+      unToggleCheckboxesInMarkdownTxt(cfg.dailySummaryNote.txt),
+    );
+  }
+
+  private _sendTasksToWidget(tasks: Task[]): void {
+    if (tasks && tasks.length) {
+      TodayWidget.updateTasks({ tasks });
     }
   }
 
@@ -298,6 +306,12 @@ export class DailySummaryComponent implements OnInit, OnDestroy, AfterViewInit {
           this.isForToday = false;
           this.dayStr = dayStr;
         }
+      });
+
+    this.tasksWorkedOnOrDoneOrRepeatableFlat$
+      .pipe(takeUntil(this._onDestroy$))
+      .subscribe((tasks) => {
+        this._sendTasksToWidget(tasks);
       });
   }
 

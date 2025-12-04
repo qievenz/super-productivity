@@ -7,4 +7,5 @@
   <string name="webview_block_provider">Provider package: %1$s</string>
   <string name="webview_block_update">Update WebView</string>
   <string name="webview_block_close">Close app</string>
+  <string name="add_task">Add Task</string>
 </resources>
